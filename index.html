@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laziz Kitchen - Catering Lezat dan Berkualitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link:hover {
+            color: #f59e0b;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="image/LOGO KATERING.jpg" alt="Logo Laziz Kitchen" class="w-10 h-10 object-contain">
+                <span class="text-amber-600 font-bold text-xl ml-2">Laziz Kitchen</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#monthly" class="nav-link text-gray-700 hover:text-amber-500 transition">Jadwal Bulanan</a>
+                <a href="#gallery" class="nav-link text-gray-700 hover:text-amber-500 transition">Galeri Menu</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-amber-500 transition">Tentang Kami</a>
+            </div>
+            
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Makanan Lezat Setiap Hari</h1>
+                <p class="text-xl mb-8">Katering berkualitas dengan menu bervariasi untuk memenuhi kebutuhan gizi harian Anda.</p>
+                <div class="flex space-x-4">
+                    <a href="#monthly" class="bg-white text-amber-600 px-6 py-3 rounded-full font-semibold hover:bg-amber-100 transition">Lihat Paket</a>
+                    <a href="#contact" class="border-2 border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-amber-600 transition">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Food Display" class="rounded-lg shadow-xl w-full max-w-md floating">
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Package Section -->
+    <section id="monthly" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-600">Paket Bulanan Laziz Kitchen</h2>
+            
+            <div class="flex justify-center">
+                <!-- Package 1 -->
+                <div class="bg-amber-50 rounded-xl p-6 shadow-lg border border-amber-200 hover:border-amber-400 transition">
+                    <div class="bg-amber-100 text-amber-800 rounded-lg px-4 py-2 font-semibold mb-4 inline-block">Paket Lengkap</div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Rp 2.500.000/bulan</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>Makan siang Senin–Jumat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>2 porsi utama + 2 sayur + nasi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>Buah segar & minuman setiap hari</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>Dessert 2x seminggu</span>
+                        </li>
+                    </ul>
+                    <button class="w-full bg-amber-500 text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition">Pesan Sekarang</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Menu Section -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-600">Menu Mingguan Laziz Kitchen</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="grid grid-cols-1 md:grid-cols-5">
+                    <!-- Monday -->
+                    <div class="border-b md:border-b-0 md:border-r border-gray-200 p-4">
+                        <h3 class="font-bold text-lg text-center mb-4 text-amber-600">Senin</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Kaki Naga</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Sayur Asem</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Tumis Kangkung</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tuesday -->
+                    <div class="border-b md:border-b-0 md:border-r border-gray-200 p-4">
+                        <h3 class="font-bold text-lg text-center mb-4 text-amber-600">Selasa</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Ayam Teriyaki</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Capcay</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Perkedel</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Wednesday -->
+                    <div class="border-b md:border-b-0 md:border-r border-gray-200 p-4">
+                        <h3 class="font-bold text-lg text-center mb-4 text-amber-600">Rabu</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Beef Teriyaki</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Sayur Sop</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Tempe Goreng</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Thursday -->
+                    <div class="border-b md:border-b-0 md:border-r border-gray-200 p-4">
+                        <h3 class="font-bold text-lg text-center mb-4 text-amber-600">Kamis</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Ikan Dori</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Tumis Buncis</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Bakwan Jagung</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Friday -->
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-center mb-4 text-amber-600">Jumat</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Burger Special</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Mie Ayam</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-utensils text-amber-500 mt-1 mr-2 text-sm"></i>
+                                <span>Bakso</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dishes Gallery -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-600">Galeri Menu Utama</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Dish 1 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1562967914-01d3c252f8ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Kaki Naga" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Kaki Naga</h3>
+                        <p class="text-gray-600">Kepiting saus tiram dengan bumbu spesial</p>
+                    </div>
+                </div>
+                
+                <!-- Dish 2 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Ayam Teriyaki" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Ayam Teriyaki</h3>
+                        <p class="text-gray-600">Ayam dengan saus teriyaki homemade</p>
+                    </div>
+                </div>
+                
+                <!-- Dish 3 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Beef Teriyaki" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Beef Teriyaki</h3>
+                        <p class="text-gray-600">Daging sapi premium dengan saus teriyaki</p>
+                    </div>
+                </div>
+                
+                <!-- Dish 4 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Ikan Dori" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Ikan Dori</h3>
+                        <p class="text-gray-600">Ikan dori goreng tepung dengan saus spesial</p>
+                    </div>
+                </div>
+                
+                <!-- Dish 5 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1562967914-01d3c252f8ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Ayam Goreng Tepung" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Ayam Goreng Tepung</h3>
+                        <p class="text-gray-600">Ayam goreng krispi dengan bumbu rempah</p>
+                    </div>
+                </div>
+                
+                <!-- Dish 6 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Ayam Goreng Kecap" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Ayam Goreng Kecap</h3>
+                        <p class="text-gray-600">Ayam goreng dengan kecap manis dan bawang</p>
+                    </div>
+                </div>
+                
+                <!-- Dish 7 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Udang Goreng Tepung" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Udang Goreng Tepung</h3>
+                        <p class="text-gray-600">Udang goreng tepung krispi dengan saus</p>
+                    </div>
+                </div>
+                
+                <!-- Dish 8 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Ayam Goreng Marinasi" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Ayam Goreng Marinasi</h3>
+                        <p class="text-gray-600">Ayam dimarinasi 24 jam dengan bumbu rahasia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Friday Special Menu -->
+    <section class="py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-orange-600">Menu Spesial Jumat</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Special 1 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Burger" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Burger Special</h3>
+                        <p class="text-gray-600">Burger dengan daging sapi premium dan sayuran segar</p>
+                    </div>
+                </div>
+                
+                <!-- Special 2 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1623341215095-6ba4f8a6c0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Mie Ayam" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Mie Ayam</h3>
+                        <p class="text-gray-600">Mie ayam dengan pangsit dan jamur kancing</p>
+                    </div>
+                </div>
+                
+                <!-- Special 3 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Bakso" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Bakso</h3>
+                        <p class="text-gray-600">Bakso urat dengan kuah kaldu sapi</p>
+                    </div>
+                </div>
+                
+                <!-- Special 4 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1604329760661-e71dc83f8f26?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Nasi Goreng" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Nasi Goreng</h3>
+                        <p class="text-gray-600">Nasi goreng spesial dengan ayam dan udang</p>
+                    </div>
+                </div>
+                
+                <!-- Special 5 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1623341215095-6ba4f8a6c0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Mie Goreng" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Mie Goreng</h3>
+                        <p class="text-gray-600">Mie goreng dengan sayuran dan daging ayam</p>
+                    </div>
+                </div>
+                
+                <!-- Special 6 -->
+                <div class="menu-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1562967914-01d3c252f8ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Paket Jumat" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Paket Spesial Jumat</h3>
+                        <p class="text-gray-600">Pilihan menu lengkap untuk hari Jumat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Contact Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-amber-600">Tentang Laziz Kitchen</h2>
+            
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Visi Kami</h3>
+                    <p class="text-gray-600 mb-6">Menyediakan makanan berkualitas tinggi dengan cita rasa yang konsisten dan bahan-bahan terbaik untuk memenuhi kebutuhan catering harian Anda.</p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Misi Kami</h3>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>Menggunakan bahan-bahan segar dan berkualitas</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>Menjaga kebersihan dan higienitas dalam setiap proses</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>Memberikan variasi menu yang bergizi dan lezat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+                            <span>Pelayanan yang ramah dan profesional</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="bg-amber-50 p-6 rounded-lg">
+                        <h3 class="text-xl font-semibold mb-4 text-amber-600">Jam Operasional</h3>
+                        <ul class="space-y-2">
+                            <li class="flex justify-between">
+                                <span class="font-medium">Senin - Kamis</span>
+                                <span>08.00 - 16.00</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="font-medium">Jumat</span>
+                                <span>08.00 - 15.00</span>
+                            </li>
+                            <li class="flex justify-between">
+                                <span class="font-medium">Sabtu - Minggu</span>
+                                <span>Libur</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div id="contact" class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Hubungi Kami</h3>
+                    
+                    <div class="bg-orange-50 p-6 rounded-lg mb-6">
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-map-marker-alt text-orange-500 mt-1 mr-3 text-lg"></i>
+                            <div>
+                                <h4 class="font-semibold">Alamat</h4>
+                                <p>Jl. Raya Katering No. 123, Kelurahan Laziz, Kecamatan Kitchen, Kota Makanan Enak</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start mb-4">
+                            <i class="fas fa-phone-alt text-orange-500 mt-1 mr-3 text-lg"></i>
+                            <div>
+                                <h4 class="font-semibold">Telepon</h4>
+                                <p>0812-3456-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-orange-500 mt-1 mr-3 text-lg"></i>
+                            <div>
+                                <h4 class="font-semibold">Email</h4>
+                                <p>info@lazizkitchen.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Nama Lengkap</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-1">Nomor Telepon</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-amber-500 text-white py-3 rounded-lg font-semibold hover:bg-amber-600 transition">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center">
+                    <img src="image/LOGO KATERING.jpg" alt="Logo Laziz Kitchen" class="w-10 h-10 object-contain">
+                    <span class="text-amber-600 font-bold text-xl">Laziz Kitchen</span>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-amber-200 hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-amber-200 hover:text-white transition">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-700 mt-8 pt-8 text-center text-amber-200">
+                <p>&copy; 2023 Laziz Kitchen. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile menu toggle functionality would go here
+        // You would need to add the mobile menu HTML and this JavaScript
+    </script>
+</body>
+</html>
